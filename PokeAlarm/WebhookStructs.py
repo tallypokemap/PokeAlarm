@@ -171,6 +171,8 @@ class RocketMap:
             id_ = data.get('gym_id')  # RM sends the gym id
 
         egg = {
+            'name': check_for_none(str, data.get('name'), 'unknown'),
+            'url': check_for_none(str, data.get('url'), 'unknown'),
             'type': 'egg',
             'id': id_,
             'raid_level': check_for_none(int, data.get('level'), 0),
@@ -213,6 +215,8 @@ class RocketMap:
             id_ = data.get('gym_id')  # RM sends the gym id
 
         raid = {
+            'name': check_for_none(str, data.get('name'), 'unknown'),
+            'url': check_for_none(str, data.get('url'), 'unknown'),
             'type': 'raid',
             'id': id_,
             'pkmn_id': check_for_none(int, data.get('pokemon_id'), 0),
